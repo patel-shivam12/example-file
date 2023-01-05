@@ -1,0 +1,35 @@
+<html>
+<head>
+ <title> Fibonacci Series in JavaScript </title>
+</head>
+<body>
+ <script>
+ 
+ function fibo(){
+    let valu = document.getElementById("no").value;
+    var n1=0,n2=1,next_num;
+    if(valu == 0)
+    {
+        document.write("Enter the natural number");
+    }
+    else if(valu <0)
+    {
+        document.write("Enter the positive number");
+    }
+    else
+    {
+    for (i = 1; i <= valu; i++) {
+     document.write(" <br> " + n1); 
+    next_num = n1 + n2; 
+    n1 = n2; 
+    n2 = next_num;
+    }
+   
+    }
+ } 
+ 
+ </script>
+ <input type="number" id="no"><br><br>
+ <button type="button" onclick="fibo()">Fibonacci</button>
+</body>
+</html>
